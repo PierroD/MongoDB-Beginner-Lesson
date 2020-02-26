@@ -34,7 +34,7 @@
 
 - Request
 
-```json
+```jql
 db.Log.aggregate(
     {
         $group: {
@@ -58,7 +58,7 @@ db.Log.aggregate(
 
 - Results :
 
-```json
+```jql
 /* 1 */
 {
 	"_id" : {
@@ -101,7 +101,7 @@ db.Log.aggregate(
 
 - Request
 
-```json
+```jql
 db.Log.find({
     "Date" : {
         $lt: new Date(),
@@ -134,7 +134,7 @@ db.Log.find({
 
 - Find hour = 14
 
-```json
+```jql
 db.Log.aggregate([
     { $project: {
         ActivityId: "$ActivityId",
@@ -149,7 +149,7 @@ db.Log.aggregate([
 
 - Find hour = 8 or hour = 14
 
-```json
+```jql
 db.Log.aggregate([
     { $project: {
         ActivityId: "$ActivityId",
